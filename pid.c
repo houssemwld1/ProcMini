@@ -85,10 +85,6 @@ ssize_t proc_read(struct file *file, char __user *usr_buf, size_t count, loff_t 
     rv = snprintf(buffer, BUFFER_SIZE, "PID: %d, Command: %s, State: %u\n",
                   struct_pid->pid, struct_pid->comm, struct_pid->__state);//here maybe there is a problem the sge fault
 
-    rv = snprintf(buffer, BUFFER_SIZE, "PID: %d, Command: %s, State: %u\n",
-                  struct_pid->pid, struct_pid->comm, struct_pid->__state);//here maybe there is a problem the sge fault
-
-
 
     printk(KERN_INFO "PID: %d, Command: %s, State: %u\n",
            struct_pid->pid, struct_pid->comm, struct_pid->__state);
